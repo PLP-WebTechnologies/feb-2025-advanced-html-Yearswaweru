@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact List and Registration Form</title>
   <style>
-    /* General styles */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
-      margin: 0;
-      padding: 20px;
-      color: #102a43;
+      line-height: 1.6;
+       max-width: 900px;
+       margin: 20px auto;
+       padding: 0 10px;
+       background: #f4f7f8;
+       color: #333;
     }
     h1, h2 {
       text-align: center;
       color: #334e68;
     }
-    /* Ordered list with roman numerals */
     ol.roman {
       list-style-type: upper-roman;
       max-width: 400px;
@@ -25,7 +25,7 @@
       padding-left: 1.2em;
       font-weight: 600;
     }
-    /* Image styling */
+    
     .external-image {
       display: block;
       margin: 20px auto;
@@ -33,7 +33,7 @@
       max-width: 90vw;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    /* Table styling */
+    
     table {
       width: 100%;
       max-width: 900px;
@@ -56,7 +56,7 @@
     tr:last-child td {
       border-bottom: none;
     }
-    /* Form container */
+    
     .registration-form {
       max-width: 500px;
       background: #fff;
@@ -65,7 +65,7 @@
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(50, 50, 93, 0.1);
     }
-    /* Form elements */
+   
     .registration-form label {
       display: block;
       margin-bottom: 8px;
@@ -94,7 +94,7 @@
       outline: none;
       border-color: #486581;
     }
-    /* Radio and checkboxes container */
+    
     .inline-group {
       display: flex;
       gap: 15px;
@@ -103,7 +103,7 @@
     .inline-group label {
       font-weight: normal;
     }
-    /* Submit button */
+   
     button[type="submit"] {
       background-color: #486581;
       color: #fff;
@@ -119,13 +119,29 @@
     button[type="submit"]:hover {
       background-color: #334e68;
     }
+     img {
+            max-width: 100%;
+            display: block;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+    .media-container {
+            margin-bottom: 30px;
+    audio, video {
+            width: 100%;
+            max-width: 480px;
+            outline: none;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
   </style>
 </head>
 <body>
 
   <h1>Welcome</h1>
 
-  <!-- Ordered list with Roman numerals -->
   <section>
     <h2>Roman Numeral List</h2>
     <ol class="roman">
@@ -136,8 +152,6 @@
       <li>Fifth item</li>
     </ol>
   </section>
-
-  <!-- External image from pexels.com -->
   <section>
     <img
       src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg"
@@ -149,7 +163,6 @@
     />
   </section>
 
-  <!-- Contacts table -->
   <section>
     <h2>Contact List</h2>
     <table aria-label="List of contacts with their details">
@@ -163,34 +176,34 @@
       </thead>
       <tbody>
         <tr>
-          <td>John Doe</td>
-          <td>123 Main St, Springfield</td>
-          <td>+1 555-123-4567</td>
-          <td>john.doe@example.com</td>
+          <td>Elizabeth Keen</td>
+          <td>123 Main St, Kileleshwa</td>
+          <td>+254 797 835 689</td>
+          <td>Elizabethkeen@gmail.com</td>
         </tr>
         <tr>
-          <td>Jane Smith</td>
-          <td>987 Elm St, Chicago</td>
-          <td>+1 555-987-6543</td>
-          <td>jane.smith@example.com</td>
+          <td>Barry Allan</td>
+          <td>987 Elm St, Lavington</td>
+          <td>+254 155 987 654</td>
+          <td>BarryAllan@yahoo.com</td>
         </tr>
         <tr>
           <td>Michael Brown</td>
-          <td>456 Oak Ave, Dallas</td>
-          <td>+1 555-456-0987</td>
-          <td>michael.brown@example.com</td>
+          <td>456 heavens gate, pavilion</td>
+          <td>+254 115 456 098</td>
+          <td>michaelbrown@gmail.com</td>
         </tr>
         <tr>
           <td>Lisa Johnson</td>
-          <td>789 Pine Rd, Miami</td>
-          <td>+1 555-789-1234</td>
-          <td>lisa.johnson@example.com</td>
+          <td>789 Pine Rd, coast</td>
+          <td>+254 726 789 123</td>
+          <td>lisajohnson@yahoo.com</td>
         </tr>
         <tr>
-          <td>David Wilson</td>
-          <td>321 Maple Ln, Boston</td>
-          <td>+1 555-321-5678</td>
-          <td>david.wilson@example.com</td>
+          <td>Raymond Redington </td>
+          <td>321 Maple Ln, Embassava</td>
+          <td>+254 701 321 567</td>
+          <td>Raymondredington@gmail.com</td>
         </tr>
       </tbody>
     </table>
@@ -304,7 +317,21 @@
       <button type="submit">Register</button>
     </form>
   </section>
-
+  <section class="media-container">
+        <h2>Multimedia Elements</h2>
+        <!-- Audio example -->
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg" />
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+           
+        </audio>
+        <!-- Video example -->
+        <video controls poster="https://images.pexels.com/photos/35600/pexels-photo.jpg" >
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+            <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg" />
+            
+        </video>
+    </section>
   <script>
     // Set max date for DOB to today to prevent future dates being selected
     document.getElementById('dob').max = new Date().toISOString().split("T")[0];
