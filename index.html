@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact List and Registration Form</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+      margin: 0;
+      padding: 20px;
+      color: #102a43;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #334e68;
+    }
+    /* Ordered list with roman numerals */
+    ol.roman {
+      list-style-type: upper-roman;
+      max-width: 400px;
+      margin: 0 auto 40px auto;
+      padding-left: 1.2em;
+      font-weight: 600;
+    }
+    /* Image styling */
+    .external-image {
+      display: block;
+      margin: 20px auto;
+      border-radius: 12px;
+      max-width: 90vw;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    /* Table styling */
+    table {
+      width: 100%;
+      max-width: 900px;
+      border-collapse: collapse;
+      margin: 40px auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #e1e8ed;
+    }
+    th {
+      background-color: #627d98;
+      color: white;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    /* Form container */
+    .registration-form {
+      max-width: 500px;
+      background: #fff;
+      padding: 30px;
+      margin: 50px auto;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(50, 50, 93, 0.1);
+    }
+    /* Form elements */
+    .registration-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #334e68;
+    }
+    .registration-form input[type="text"],
+    .registration-form input[type="email"],
+    .registration-form input[type="password"],
+    .registration-form input[type="date"],
+    .registration-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1.8px solid #bcccdc;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+    }
+    .registration-form input[type="text"]:focus,
+    .registration-form input[type="email"]:focus,
+    .registration-form input[type="password"]:focus,
+    .registration-form input[type="date"]:focus,
+    .registration-form select:focus {
+      outline: none;
+      border-color: #486581;
+    }
+    /* Radio and checkboxes container */
+    .inline-group {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .inline-group label {
+      font-weight: normal;
+    }
+    /* Submit button */
+    button[type="submit"] {
+      background-color: #486581;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    button[type="submit"]:hover {
+      background-color: #334e68;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome</h1>
+
+  <!-- Ordered list with Roman numerals -->
+  <section>
+    <h2>Roman Numeral List</h2>
+    <ol class="roman">
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+      <li>Fourth item</li>
+      <li>Fifth item</li>
+    </ol>
+  </section>
+
+  <!-- External image from pexels.com -->
+  <section>
+    <img
+      src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg"
+      alt="Beautiful landscape"
+      class="external-image"
+      width="600"
+      height="400"
+      loading="lazy"
+    />
+  </section>
+
+  <!-- Contacts table -->
+  <section>
+    <h2>Contact List</h2>
+    <table aria-label="List of contacts with their details">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Mobile</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John Doe</td>
+          <td>123 Main St, Springfield</td>
+          <td>+1 555-123-4567</td>
+          <td>john.doe@example.com</td>
+        </tr>
+        <tr>
+          <td>Jane Smith</td>
+          <td>987 Elm St, Chicago</td>
+          <td>+1 555-987-6543</td>
+          <td>jane.smith@example.com</td>
+        </tr>
+        <tr>
+          <td>Michael Brown</td>
+          <td>456 Oak Ave, Dallas</td>
+          <td>+1 555-456-0987</td>
+          <td>michael.brown@example.com</td>
+        </tr>
+        <tr>
+          <td>Lisa Johnson</td>
+          <td>789 Pine Rd, Miami</td>
+          <td>+1 555-789-1234</td>
+          <td>lisa.johnson@example.com</td>
+        </tr>
+        <tr>
+          <td>David Wilson</td>
+          <td>321 Maple Ln, Boston</td>
+          <td>+1 555-321-5678</td>
+          <td>david.wilson@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Registration form -->
+  <section>
+    <h2>Registration Form</h2>
+    <form class="registration-form" novalidate>
+      <!-- Name field -->
+      <label for="name">Name <span aria-label="required">*</span></label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your full name"
+        required
+        minlength="2"
+        maxlength="50"
+        aria-required="true"
+      />
+
+      <!-- Email field -->
+      <label for="email">Email <span aria-label="required">*</span></label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="example@example.com"
+        required
+        aria-required="true"
+      />
+
+      <!-- Password field -->
+      <label for="password">Password <span aria-label="required">*</span></label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Choose a strong password"
+        required
+        minlength="6"
+        aria-required="true"
+      />
+
+      <!-- Date of Birth field -->
+      <label for="dob">Date of Birth <span aria-label="required">*</span></label>
+      <input
+        type="date"
+        id="dob"
+        name="dob"
+        required
+        aria-required="true"
+        max=""
+      />
+
+      <!-- Dropdown select -->
+      <label for="country">Country</label>
+      <select id="country" name="country" required aria-required="true">
+        <option value="" disabled selected>Select your country</option>
+        <option value="usa">United States</option>
+        <option value="canada">Canada</option>
+        <option value="uk">United Kingdom</option>
+        <option value="australia">Australia</option>
+        <option value="other">Other</option>
+      </select>
+
+      <!-- Radio buttons -->
+      <fieldset>
+        <legend>Gender <span aria-label="required">*</span></legend>
+        <div class="inline-group">
+          <label>
+            <input type="radio" name="gender" value="male" required aria-required="true" />
+            Male
+          </label>
+          <label>
+            <input type="radio" name="gender" value="female" />
+            Female
+          </label>
+          <label>
+            <input type="radio" name="gender" value="other" />
+            Other
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Checkboxes -->
+      <fieldset>
+        <legend>Interests</legend>
+        <div class="inline-group">
+          <label>
+            <input type="checkbox" name="interests" value="sports" />
+            Sports
+          </label>
+          <label>
+            <input type="checkbox" name="interests" value="music" />
+            Music
+          </label>
+          <label>
+            <input type="checkbox" name="interests" value="tech" />
+            Technology
+          </label>
+          <label>
+            <input type="checkbox" name="interests" value="reading" />
+            Reading
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Submit button -->
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <script>
+    // Set max date for DOB to today to prevent future dates being selected
+    document.getElementById('dob').max = new Date().toISOString().split("T")[0];
+    
+    // Simple form validation on submit
+    document.querySelector('.registration-form').addEventListener('submit', function(event) {
+      if (!this.checkValidity()) {
+        event.preventDefault();
+        alert('Please fill out all required fields correctly.');
+      }
+    });
+  </script>
+
+</body>
+</html>
+
